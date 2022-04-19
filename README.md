@@ -4,4 +4,4 @@ Oleh :
 > Januar Evan - 5025201210
 
 1. List rekam medis yang ada
-[](pic/image (15).png)
+[](https://github.com/EvanZJ/Tugas3PBKK/blob/main/pic/image%20(15).png)
