@@ -19,3 +19,5 @@ Oleh :
 ![](https://github.com/EvanZJ/Tugas3PBKK/blob/main/pic/image%20(21).png)
 8. Detai rekam medis yang baru diedit
 ![](https://github.com/EvanZJ/Tugas3PBKK/blob/main/pic/image%20(22).png)
+9. Penghapusan rekam medis
+![](https://github.com/EvanZJ/Tugas3PBKK/blob/main/pic/image%20(23).png)
