@@ -24,7 +24,7 @@
                     <x-nav-link :href="route('rekammedis')" :active="request()->routeIs('rekammedis')">
                         {{ __('Rekam Medis') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('form')" :active="request()->routeIs('form')">
+                    <x-nav-link :href="route('rekammedis.tambah-data')" :active="request()->routeIs('rekammedis.tambah-data')">
                         {{ __('Form') }}
                     </x-nav-link>
                 </div>

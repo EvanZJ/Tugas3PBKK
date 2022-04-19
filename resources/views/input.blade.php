@@ -13,7 +13,7 @@
                         <div class="row justify-content-center">
                             <div class="col-lg-6">
                                 <div class="card mt-5">
-                                    <h3 class="text-center">Biodata Form</h3>
+                                    <h3 class="text-center">Patient Form</h3>
                                     @if (count($errors) > 0)
                                     <div class="alert alert-danger">
                                         <ul>
@@ -24,15 +24,24 @@
                                     </div>
                                     @endif
                                     <br/>
-                                    <form action="/proceed" method="POST" enctype="multipart/form-data">
-                                        {{ csrf_field() }}
+                                    <form action="{{ route('rekammedis.buat-data') }}" method="POST" enctype="multipart/form-data">
+                                        @csrf
+                                        {{--  {{ csrf_field() }}  --}}
                                         <div class="form-group">
-                                            <label for="name">Name</label>
-                                            <input class="form-control" type="text" name="name" value="{{ old('name') }}">
+                                            <label for="position-option">Doctor</label>
+                                            <select class="form-control" id="dokter_id" name="dokter_id">
+                                                @foreach ($doctors as $doctor)
+                                                <option value="{{ $doctor->id }}">{{ $doctor->name }}</option>
+                                                @endforeach
+                                            </select>
                                         </div>
                                         <div class="form-group">
-                                            <label for="dokter">Dokter</label>
-                                            <input class="form-control" type="text" name="dokter" value="{{ old('dokter') }}">
+                                            <label for="position-option">Patient</label>
+                                            <select class="form-control" id="pasien_id" name="pasien_id">
+                                            @foreach ($patients as $patient)
+                                                <option value="{{ $patient->id }}">{{ $patient->name }}</option>
+                                            @endforeach
+                                            </select>
                                         </div>
                                         <div class="form-group">
                                             <label for="status">Status</label>
@@ -42,9 +51,7 @@
                                             <label for="suhu">Suhu</label>
                                             <input class="form-control" type="number" step="0.01" name="suhu" value="{{ old('suhu') }}">
                                         </div>
-                                        <div class="form-group">
-                                            <label for="picture">Profile Picture</label>
-                                            <input type="file" class="form-control-file" name="picture">
+                                        <br>
                                         <div class="form-group">
                                             <input class="btn btn-primary" type="submit" value="Submit">
                                         </div>

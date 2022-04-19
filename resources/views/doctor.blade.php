@@ -13,7 +13,7 @@
                     @foreach ($doctor->RekamMedis as $rekammedis)
                         <article class="mb-5">
                             <header>
-                                <h3><a href="/rekammedis/{{ $rekammedis->id }}" class="no-underline hover:underline">{{ $rekammedis->id }} <a>| <a href="/dokter/{{ $rekammedis->pasien->slug }}" class="no-underline hover:underline" >{{ $rekammedis->pasien->name }} </h3>
+                                <h3><a href="/rekammedis/{{ $rekammedis->id }}" class="no-underline hover:underline">{{ $rekammedis->id }} <a>| <a href="/patient/{{ $rekammedis->pasien->slug }}" class="no-underline hover:underline" >{{ $rekammedis->pasien->name }} </h3>
                             </header>
                             <h6>{{ $rekammedis->created_at->diffForHumans() }}</h6>
                         </article>

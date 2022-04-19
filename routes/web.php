@@ -48,10 +48,13 @@ Route::get("/patient", [PasienController::class, 'index'])->middleware(['auth'])
 Route::get("/patient/{patient:slug}", [PasienController::class, 'content'])->middleware(['auth']);
 
 Route::get("/rekammedis", [RekamController::class, 'index'])->middleware(['auth'])->name('rekammedis');
-Route::get("/rekammedis/{rekammedis:id}", [RekamController::class, 'content'])->middleware(['auth']);
+Route::get("/rekammedis/{rekammedis:id}", [RekamController::class, 'content'])->middleware(['auth'])->name('rekammedis.show');
 
 Route::get("/dokter", [DokterController::class, 'index'])->middleware(['auth'])->name('dokter');
-Route::get("/dokter/{dokter:slug}", [DokterController::class, 'content'])->middleware(['auth']);
+Route::get("/dokter/{doctor:slug}", [DokterController::class, 'content'])->middleware(['auth']);
 
-Route::get('/input',[BiodataController::class, 'input'])->middleware(['auth'])->name('form');;
-Route::post('/proceed', [BiodataController::class, 'proceed'])->middleware(['auth']);
+Route::get('/input',[BiodataController::class, 'input'])->middleware(['auth'])->name('rekammedis.tambah-data');
+Route::post('/input-data', [BiodataController::class, 'store'])->middleware(['auth'])->name('rekammedis.buat-data');
+Route::get('/edit/{id}', [BiodataController::class, 'edit'])->middleware(['auth'])->name('rekammedis.edit');
+Route::post('/update/{id}', [BiodataController::class, 'update'])->middleware(['auth'])->name('rekammedis.update');
+Route::delete('/delete/{id}', [BiodataController::class, 'destroy'])->middleware(['auth'])->name('rekammedis.destroy');

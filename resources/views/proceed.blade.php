@@ -19,19 +19,19 @@
                                             <strong>{{ $message }}</strong>
                                         </div>
                                         @endif
-                                        <h3 class="text-center">Biodata Display</h3>
-                                        <div class="text-center">
+                                        <h3 class="text-center">Patient Display</h3>
+                                        {{--  <div class="text-center">
                                             <img src="{{ '/' . $imageName }}" alt="Image" width="200" height="auto">
-                                        </div>
+                                        </div>  --}}
                                         <br/>
                                         <table class="table table-bordered table-striped">
                                             <tr>
                                                 <td style="width:200px">Name</td>
-                                                <td>{{ $data->name }}</td>
+                                                <td>{{ $data->patient }}</td>
                                             </tr>
                                             <tr>
                                                 <td>Dokter</td>
-                                                <td>{{ $data->dokter }}</td>
+                                                <td>{{ $data->doctor }}</td>
                                             </tr>
                                             <tr>
                                                 <td>Status</td>

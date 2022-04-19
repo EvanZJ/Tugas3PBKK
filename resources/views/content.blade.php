@@ -11,11 +11,13 @@
                     <article class="mb-5">
                         <header>
                             <h3><a href="/patient/{{ $rekammedis->pasien->slug }}"class="no-underline hover:underline">{{ $rekammedis->pasien->name }}</h3>
-                            <small><a href="/dokter/{{ $rekammedis->dokter->slug }}"class="no-underline hover:underline">Dokter : {{ $rekammedis->dokter->name }}</small>
-                        </header>
-                        <br>
-                        <p>Status : {{ $rekammedis->status }}</p>
+                            <small>
+                                <a href="/dokter/{{ $rekammedis->dokter->slug }}"class="no-underline hover:underline">Dokter : {{ $rekammedis->dokter->name }}</a>
+                            </small>
+                            </header>
                     </article>
+                    <h3>Status : {{ $rekammedis->status }}</h3>
+                    <h3>Suhu : {{ $rekammedis->suhu }}</h3>
                 </div>
             </div>
         </div>

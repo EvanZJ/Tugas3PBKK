@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class RekamMedis extends Model
 {
     use HasFactory;
+    protected $fillable = ['dokter_id', 'pasien_id', 'slug', 'status', 'suhu'];
     public function pasien(){
         return $this->belongsTo(Pasien::class);
     }
